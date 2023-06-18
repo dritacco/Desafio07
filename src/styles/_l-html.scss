@@ -1,0 +1,12 @@
+/* // html */
+@use './h-fonts' as F;
+
+
+html{
+    font-family: F.$mainFont;
+    font-size: F.$fontSize;
+    font-weight: F.$textRegular;
+    line-height: F.$lineHeight;
+
+
+}
