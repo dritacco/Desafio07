@@ -8,6 +8,9 @@ html {
 }
 
 /* // Header */
-/* // Header */
+.Header {
+  background-image: url(../../public/img/bg-header-desktop.png);
+}
+
 /* // Main */ /* // Footer */
 /* // Footer */
