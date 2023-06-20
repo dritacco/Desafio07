@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
 /* // html */
 html {
   font-family: "Bai Jamjuree", sans-serif;
@@ -8,9 +9,55 @@ html {
 }
 
 /* // Header */
-.Header {
-  background-image: url(../../public/img/bg-header-desktop.png);
+@media (min-width: 375px) {
+  .Header {
+    background-image: url(../../public/img/bg-header-mobile.png);
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .Header .section {
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 1440px) {
+  .Header {
+    background-image: url(../../public/img/bg-header-desktop.png);
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .Header .section {
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+  }
 }
 
-/* // Main */ /* // Footer */
+/* // Main */
+@media (min-width: 375px) {
+  .Main .section {
+    background-color: blue;
+  }
+  .Main .section:first-child {
+    background-color: red;
+  }
+  .Main .section:nth-child(2) {
+    background-color: green;
+  }
+  .Main .section:nth-child(3) {
+    background-color: yellow;
+  }
+  .Main .section:nth-child(4) {
+    background-color: grey;
+  }
+  .Main .section:last-child {
+    background-color: orange;
+  }
+}
+/* // Footer */
 /* // Footer */
