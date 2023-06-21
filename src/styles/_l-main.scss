@@ -201,10 +201,36 @@
                 width: 700px;
             }
 
+        
+
 
         }
        
+        & .section:nth-child(4){
+            article{
+                @include M.Display( flex, column, space-between, center, 0.3rem);
+            }
+            
+            & main{
+                padding: 4rem 6rem;
+                p{
+                    padding: 0 0.5rem;
+                }
+                @include M.Display( flex, row nowrap, space-around, center);
+            } 
+            
+            & footer{
+                padding-top: 4rem;
+                @include M.Display( flex, row nowrap, space-around, center, 6rem);
+            }
+        }
+
         & .section:last-child{
+
+            p{
+                padding: 1rem 20rem;
+            }
+
             .footer{
 
                 /* // Botones ACTIVE */
