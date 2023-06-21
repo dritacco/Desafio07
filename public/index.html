@@ -8,10 +8,12 @@
 
   <!-- links externos -->
   <link rel="stylesheet" href="./styles/reset.css">
-  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   
   <!-- links internos -->
-  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles.css">
   
   <title>Frontend Mentor | Clipboard landing page</title>
 
@@ -28,7 +30,7 @@
     <section class="section">
       <article class="article">
           <figure>
-            <img src="./img/logo.svg" alt="Logo Header">
+            <img src="./img/logo.svg" alt="logo header">
           </figure>
       </article>
     </section>
@@ -59,18 +61,23 @@
           <p>Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything.</p>                
         </header>
         <main class="main">
-          <article>
-            <h3>Quick Search</h3>
-            <p>Easily search your snippets by content, category, web address, application, and more.</p>
-          </article>
-          <article>
-            <h3>iCloud Sync</h3>
-            <p>Instantly saves and syncs snippets across all your devices.</p>
-          </article>
-          <article>
-            <h3>Complete History</h3>
-            <p>Retrieve any snippets from the first moment you started using the app.</p>               
-          </article>
+          <figure>
+            <img src="./img/image-computer.png" alt="image computer">
+          </figure>
+          <section>
+            <article>
+              <h3>Quick Search</h3>
+              <p>Easily search your snippets by content, category, web address, application, and more.</p>
+            </article>
+            <article>
+              <h3>iCloud Sync</h3>
+              <p>Instantly saves and syncs snippets across all your devices.</p>
+            </article>
+            <article>
+              <h3>Complete History</h3>
+              <p>Retrieve any snippets from the first moment you started using the app.</p>               
+            </article>
+        </section>
         </main>
       </article>
     </section>
@@ -82,7 +89,7 @@
           <p>Whether you're on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks.</p>                  
         </header>
         <main class="main">
-          <img src="" alt="">
+          <img src="./img/image-devices.png" alt="image devices">
          </main>
       </article>
     </section>
@@ -95,27 +102,27 @@
         </header>
         <main class="main">
           <article>
-            <img src="" alt="">
+            <img src="./img/icon-blacklist.svg" alt="list icon">
             <h3>Create blacklists</h3>
             <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
           </article>
           <article>
-            <img src="" alt="">
+            <img src="./img/icon-text.svg" alt="text icon">
             <h3>Plain text snippets</h3>
             <p>Remove unwanted formatting from copied text for a consistent look.</p>
           </article>
           <article>
-            <img src="" alt="">
+            <img src="./img/icon-preview.svg" alt="preview icon">
             <h3>Sneak preview</h3>
             <p>Quick preview of all snippets on your Clipboard for easy access.</p>                 
           </article> 
         </main>
         <footer class="footer">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
-          <img src="" alt="">
+          <img src="./img/logo-google.png" alt="logo of Google">
+          <img src="./img/logo-ibm.png" alt="logo of IBM">
+          <img src="./img/logo-microsoft.png" alt="logo of Microsoft">
+          <img src="./img/logo-hp.png" alt="logo of Hewlett Packard Enterprise">
+          <img src="./img/logo-vector-graphics.png" alt="logo of Vector Graphics">
         </footer>
       </article>
     </section>
@@ -138,11 +145,38 @@
   <!--Fin Main-->
   <!--Comienza Footer-->
   <footer class="Footer">
-    FAQs
-    Contact Us
-    Privacy Policy
-    Press Kit
-    Install Guide
+    <section class="section">
+      <article class="article">
+        <header class="header">
+          <figure>
+            <img height="50px" alt="Logo " src="./img/logo.svg" />
+          </figure>
+        </header>
+        <main>
+          <a href="">FAQs</a>
+          <a href="">Contact Us</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Press Kit</a>
+          <a href="">Install Guide</a>
+        </main>
+        <footer>
+          <!-- FB -->
+            <a href="https://facebook.com/" target="_blank"> 
+              <i class="fa fa-facebook fa-inverse"></i>
+            </a>
+        
+        <!-- Tw -->
+            <a href="https://twitter.com/" target="_blank">
+              <i class="fa fa-twitter"></i>
+            </a>
+        
+        <!-- Insta -->                       
+            <a href="https://instagram.com/" target="_blank">
+              <i class="fa fa-instagram"></i>
+            </a>
+        </footer>
+      </article>
+    </section>
   </footer>
   <!--Fin Footer-->
 </body>

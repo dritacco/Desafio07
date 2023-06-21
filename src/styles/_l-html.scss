@@ -1,5 +1,7 @@
 /* // html */
-@use './h-fonts' as F;
+@use './h-fonts.scss' as F;
+@use './h-colors.scss' as C;
+@use './mixin.scss' as M;
 
 
 html{
@@ -8,5 +10,26 @@ html{
     font-weight: F.$textRegular;
     line-height: F.$lineHeight;
 
+    & p {
+        font-size: F.$textXs;
+        color: C.$neutralColor2;
+    }
+    
+    & h1, h2, h3{
+        color: C.$neutralColor1;
+        font-weight: F.$textSemiBold;
+    }
+
+    & h1{
+        font-size: F.$textXl;
+    }
+
+    & h2{
+        font-size: F.$textLg;
+    }
+
+    & h3{
+        font-size: F.$textMd;
+    }
 
 }

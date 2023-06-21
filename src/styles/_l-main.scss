@@ -1,45 +1,223 @@
 /* // Main */
 
-@import './mixin.scss';
-@import './h-fonts';
-@import './h-colors';
+@use './h-fonts' as F;
+@use './h-colors' as C;
+@use './mixin.scss' as M;
 
 .Main {
     //Estilos para mobile
-    @include medias(mobile) {
+    @include M.medias(mobile) {
 
-        & .section {
-            background-color: blue;
-
+        margin-bottom: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: center;
+        
+        
+        p{
+            padding: 0.5rem 0;
         }
-
+        
+        h1, h2, h3{
+            line-height: F.$lineHeightHeader;
+        }
+        
+        //Primer hijo mobile
         & .section:first-child{
-            background-color: red;
-        }
 
+            margin-bottom: 150px;
+
+            .footer {
+                
+                .button:first-child{
+                    //Boton iOS
+                    @include M.Button( 1rem, 700, white, C.$primaryColor, 30px, 0 1px 2px hsl(171, 89%, 18%), 0.5rem 3.6rem);
+                    margin-top: 2rem;
+                }
+                .button:last-child{
+                    //Boton Mac
+                    @include M.Button( 1rem, 700, white, C.$secondaryColor, 30px, 0 1px 2px hsl(233, 78%, 34%), 0.5rem 3.6rem);
+                    margin-top: 1.5rem;
+                }
+
+                /* // Botones ACTIVE */
+                .button:first-child:hover{
+                    cursor: pointer;
+                    background-color: C.$buttonActive1;
+                }
+
+                .button:last-child:hover{
+                    cursor: pointer;
+                    background-color: C.$buttonActive2;
+                }
+
+                    /* // Botones ACTIVE */
+                    .button:first-child:hover{
+                        cursor: pointer;
+                        background-color: C.$buttonActive1;
+                    }
+    
+                    .button:last-child:hover{
+                        cursor: pointer;
+                        background-color: C.$buttonActive2;
+                    }
+
+                
+            }
+        }
+        //Segundo hijo mobile
         & .section:nth-child(2){
-            background-color: green;
-        }
 
+            .main {
+
+                margin-bottom: 150px;
+
+                article {
+
+                    margin-bottom: 30px;
+
+                    img {
+                        margin-top: 40px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+        
+        //Tercer hijo mobile
         & .section:nth-child(3){
-            background-color: yellow;
+
+            .header {
+                margin-bottom: 50px;
+            }
         }
 
         & .section:nth-child(4){
-            background-color: grey;
+
+            padding: 4rem 0 2rem 0;
+
+            article{
+                padding: 2rem 0.5rem;
+            }
+
+            footer{
+                @include M.Display( flex, column, center,center, 3rem);
+
+                img{
+                    width: 7rem;
+                }
+            }
         }
 
         & .section:last-child{
-            background-color: orange;
+
+            padding: 4rem 0 2rem 0;
+
+            article{
+                padding: 2rem 0.5rem;
+            }
+
+            footer{
+                padding-top: 1rem;
+                .button:first-child{
+                    // Boton
+                    @include M.Button( 1rem, 700, white, C.$primaryColor, 30px, 0 1px 2px hsl(171, 89%, 18%), 0.5rem 3.6rem);
+                    margin-top: 1rem;
+                }
+                .button:last-child{
+                    // Boton
+                    @include M.Button( 1rem, 700, white, C.$secondaryColor, 30px, 0 1px 2px hsl(233, 78%, 34%), 0.5rem 3.6rem);
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+
+    @include M.medias(desktop) {
+
+
+        //Estilos primer sección
+        & .section:first-child {
+
+            @include M.Display ( flex, row, center, center);
+
+            .main {
+                width: 490px;
+            }
+
+            .footer {
+                
+                .button:first-child{
+                    //Boton iOS
+                    @include M.Button( 1rem, 700, white, C.$primaryColor, 30px, 0 1px 2px hsl(171, 89%, 18%), 0.5rem 1.7rem);
+                    margin-top: 2rem;
+                    margin-right: 0.5rem;
+                    
+                }
+                .button:last-child{
+                    //Boton Mac
+                    @include M.Button( 1rem, 700, white, C.$secondaryColor, 30px, 0 1px 2px hsl(233, 78%, 34%), 0.5rem 1.5rem);
+                    margin-top: 1.7rem;
+                }
+            }
+
         }
 
+        & .section:nth-child(2) {
+
+            .header {
+                margin-left: 400px;
+                margin-right: 400px;
+                margin-bottom: 50px;
+            }
+
+            .main {
+                @include M.Display( flex, row, start, center, 0.3rem);
+
+                margin-left: -90px;
+
+                img {
+                    height: 550px;
+                    margin-right: 80px;
+                }
+
+                & article {
+                    @include M.Display( flex, column, center, start);
+                    width: 320px;
+                    
+                    text-align: left;
+                }
+            }
+        }
+
+        & .section:nth-child(3) {
+
+            p {
+                margin-left: 400px;
+                margin-right: 400px;
+            }
+
+            img {
+                width: 700px;
+            }
+
+
+        }
+       
+        & .section:last-child{
+            .footer{
+
+                /* // Botones ACTIVE */
+                .button:first-child:hover{
+                    cursor: pointer;
+                    background-color: C.$buttonActive1;
+                }
+
+                .button:last-child:hover{
+                    cursor: pointer;
+                    background-color: C.$buttonActive2;
+                }
+            }
+        }
     }
-
-    @include medias(desktop) {
-
-
-    }
-
-
-
 }

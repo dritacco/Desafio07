@@ -1,2 +1,51 @@
 /* // Footer */
-/* // Footer */
+@use './h-fonts' as F;
+@use './h-colors' as C;
+@use './mixin.scss' as M;
+
+.Footer{
+    color: C.$neutralColor1;
+    background-color: C.$footerColor;
+
+    & a{
+        font-size: F.$textSm;
+    }
+
+     /* // Logos redes */
+    & .fa{
+        font-size: 1.5rem;
+        padding: 8px 9px;
+        color: C.$neutralColor1;
+        }
+
+    @include M.medias(mobile) {
+        padding: 3rem 0; 
+        text-align: center;
+
+        @include M.Display( flex, column, center, center, 1rem);
+
+        header{
+            padding-bottom: 1rem;
+        }
+        main{
+            @include M.Display( flex, column, center, center, 1rem);
+            padding-bottom: 1rem;
+        }
+        footer{
+            padding-top: 1rem;
+        }
+    }
+
+    @include M.medias(desktop) {
+       
+        /* // Links ACTIVE */
+        & a:hover{
+            color: C.$primaryColor;
+        }
+
+        /* // Logos redes ACTIVE */
+        & .fa:hover{
+            color: C.$primaryColor;
+        }
+    }
+}
