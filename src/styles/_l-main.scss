@@ -13,7 +13,6 @@
         margin-right: 40px;
         text-align: center;
         
-        
         p{
             padding: 0.5rem 0;
         }
@@ -39,30 +38,6 @@
                     @include M.Button( 1rem, 700, white, C.$secondaryColor, 30px, 0 1px 2px hsl(233, 78%, 34%), 0.5rem 3.6rem);
                     margin-top: 1.5rem;
                 }
-
-                /* // Botones ACTIVE */
-                .button:first-child:hover{
-                    cursor: pointer;
-                    background-color: C.$buttonActive1;
-                }
-
-                .button:last-child:hover{
-                    cursor: pointer;
-                    background-color: C.$buttonActive2;
-                }
-
-                    /* // Botones ACTIVE */
-                    .button:first-child:hover{
-                        cursor: pointer;
-                        background-color: C.$buttonActive1;
-                    }
-    
-                    .button:last-child:hover{
-                        cursor: pointer;
-                        background-color: C.$buttonActive2;
-                    }
-
-                
             }
         }
         //Segundo hijo mobile
@@ -76,10 +51,12 @@
 
                     margin-bottom: 30px;
 
-                    img {
-                        margin-top: 40px;
-                        margin-bottom: 30px;
-                    }
+
+                }
+
+                figure {
+                    margin-top: 40px;
+                    margin-bottom: 30px;
                 }
             }
         }
@@ -91,7 +68,7 @@
                 margin-bottom: 50px;
             }
         }
-
+        //Cuarto hijo mobile
         & .section:nth-child(4){
 
             padding: 4rem 0 2rem 0;
@@ -109,6 +86,7 @@
             }
         }
 
+        //Quinto hijo mobile
         & .section:last-child{
 
             padding: 4rem 0 2rem 0;
@@ -136,7 +114,7 @@
     @include M.medias(desktop) {
 
 
-        //Estilos primer sección
+        //Primer hijo desktop
         & .section:first-child {
 
             @include M.Display ( flex, row, center, center);
@@ -159,10 +137,21 @@
                     @include M.Button( 1rem, 700, white, C.$secondaryColor, 30px, 0 1px 2px hsl(233, 78%, 34%), 0.5rem 1.5rem);
                     margin-top: 1.7rem;
                 }
+
+                // Botones ACTIVE 
+                .button:first-child:hover{
+                cursor: pointer;
+                background-color: C.$buttonActive1;
+                }
+
+                .button:last-child:hover{
+                    cursor: pointer;
+                    background-color: C.$buttonActive2;
+                }
             }
 
         }
-
+        //Segundo hijo desktop
         & .section:nth-child(2) {
 
             .header {
@@ -190,6 +179,7 @@
             }
         }
 
+        //Tercer hijo desktop
         & .section:nth-child(3) {
 
             p {
@@ -200,12 +190,9 @@
             img {
                 width: 700px;
             }
-
-        
-
-
         }
-       
+
+        //Cuarto hijo desktop
         & .section:nth-child(4){
             article{
                 @include M.Display( flex, column, space-between, center, 0.3rem);
@@ -225,6 +212,7 @@
             }
         }
 
+        //Quinto hijo desktop
         & .section:last-child{
 
             p{
